@@ -1,21 +1,22 @@
-package ru.quipy.shopService.warehouse.config
+package ru.quipy.shopService2.delivery.config
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import ru.quipy.core.EventSourcingService
 import ru.quipy.core.EventSourcingServiceFactory
-import ru.quipy.shopService.warehouse.api.WarehouseAggregate
-import ru.quipy.shopService.warehouse.logic.Warehouse
+import ru.quipy.shopService2.delivery.api.DeliveryAggregate
+import ru.quipy.shopService2.delivery.logic.Delivery
+
 import java.util.*
 
 @Configuration
-class WarehouseBoundedContextConfig {
+class DeliveryBoundedContextConfig {
 
     @Autowired
     private lateinit var eventSourcingServiceFactory: EventSourcingServiceFactory
 
     @Bean
-    fun warehouseEsService(): EventSourcingService<UUID, WarehouseAggregate, Warehouse> =
+    fun deliveryEsService(): EventSourcingService<UUID, DeliveryAggregate, Delivery> =
         eventSourcingServiceFactory.create()
 }

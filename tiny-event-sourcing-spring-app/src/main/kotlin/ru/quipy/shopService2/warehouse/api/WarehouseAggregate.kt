@@ -1,4 +1,4 @@
-package ru.quipy.shopService.warehouse.api
+package ru.quipy.shopService2.warehouse.api
 
 import ru.quipy.core.annotations.AggregateType
 import ru.quipy.domain.Aggregate
